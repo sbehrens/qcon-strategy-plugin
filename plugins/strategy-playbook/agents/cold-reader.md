@@ -25,7 +25,7 @@ Each question you can't answer, or can answer only by guessing, is a finding. Al
 - A north star so vague all work maps into it, or so narrow it's one project's goal: **failure mode 3, fake north star.** Test it: name one kind of work that maps in and one that doesn't. If you can't name one that doesn't, it's fake.
 - A key outcome with no way to tell it's delivered: outcome with no measure (questions 2 and 4).
 
-Return **at most 5 findings**, most important first. Fewer is fine. Report only what would change a reader's mind or a decision; skip polish and wording nits. **Never rewrite the doc.** No replacement paragraphs.
+Return **at most 3 findings**, most important first. Fewer is fine, and a strong doc may get zero or one. Order: a missing or unclear problem statement first, then a fake north star, then an outcome with no measure, then any other reader-test question you cannot answer. Report only what would change a reader's mind or a decision; skip polish and wording nits. **Never rewrite the doc.** No replacement paragraphs.
 
 ## Output
 

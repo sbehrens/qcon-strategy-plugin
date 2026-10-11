@@ -10,7 +10,7 @@
 
 **Intent:** To drive commitment for staffing and alignment by Oct 27, 2026
 
-**Decision:** Yes, fund the tiger team. Staffing commitments are due Oct 31, 2026.
+**Decision:** Yes, fund the tiger team. Managers confirm staffing by Oct 31, 2026.
 
 ---
 
@@ -35,7 +35,8 @@ Reduce misalignments in AI, resulting in lower costs, a lower error rate, and fe
 
 ### Next Steps
 
-- By Oct 31, 2026, secure funding for a small tiger team: 5 experts, 100% allocated, for 2 weeks.
+- By Oct 27, 2026, get a yes to fund a small tiger team: 5 experts, 100% allocated, for 2 weeks.
+- By Oct 31, 2026, managers confirm who they are staffing (see the staffing model).
 - Nov 2-13, 2026, the tiger team builds prototypes and develops the technical strategy with tradeoffs.
 - By Nov 20, 2026, the strategy draft is ready, with enough specificity to steer an execution roadmap.
 

@@ -27,6 +27,8 @@ If nothing is found, ask the user to paste their draft or describe where they ar
 | 5 Strategy | Guiding principles, scope and non-goals, bets written "X versus Y", detailed bet paragraphs | All four present |
 | Combined doc | One doc with motivation, north star, key outcomes, principles, scope, bets, plus risks, metrics, questions | Every section filled; no "Open sections" left |
 
+In a combined doc, the Motivation section stands in for the problem statement: judge it as a summary (problem, impact, why it matters), not against the full level 2 checklist. The template order (north star and outcomes before Motivation; Questions before Detailed Bets) is intended; do not flag it.
+
 For each: report **done**, **partial** (name what's missing), or **missing**. Quote a few words of evidence for each "done" so the user can see why.
 
 ## 3. Report
@@ -34,7 +36,7 @@ For each: report **done**, **partial** (name what's missing), or **missing**. Qu
 Keep it short:
 - **Where you are:** one line per level found.
 - **Gaps:** the specific missing pieces (for example "bets have no detailed paragraphs", "no non-goals", "outcome 2 has no measure").
-- **Next:** offer one or two tools, never a forced sequence. Pick from:
+- **Next:** offer the next tools as options, never a forced sequence. Pick from:
   - `problem-statement` - write or fix the pitch.
   - `north-star` - draft the north star and key outcomes.
   - `strategy-bets` - principles, scope, bets.
@@ -42,10 +44,11 @@ Keep it short:
   - The critic agents, once there is a draft with bets: `likeliest-dissenter` (argues the other side of each bet), `cold-reader` (the four-question reader test), `exec-preview` (cost, value, data).
   - Level 6 Q&A (`ask-the-talk`): rolling it out, the ring of support, the feedback log - offer this when the combined doc is complete.
 
-Routing hints:
-- Problem statement done, nothing else: offer `north-star` or `strategy-bets`.
-- Bets only (no doc around them): offer `strategy-bets` to add principles and scope, the critics on the bets, and `strategy-doc` to build the combined doc.
-- A full combined doc: offer the three critics and level 6 Q&A on communicating it.
+These routes are required. Match the state and include every tool the route names:
+- **Problem statement only:** level 2 done. Offer `north-star` or `strategy-bets`.
+- **Bets only, with no doc around them** (files or pasted text): offer `strategy-bets` to add principles, scope, and non-goals; the critics on the bets (`likeliest-dissenter` first); and `strategy-doc` to build the combined doc around them.
+- **A full combined doc:** offer all three critics (`likeliest-dissenter`, `cold-reader`, `exec-preview`) and level 6 Q&A through `ask-the-talk` (the reader test, the ring of support, the feedback log, the executive pitch).
+- **Anything else:** the one or two tools that close the biggest gap.
 
 Levels 3 (tiger teams), 6 (comms and feedback), and 7 (failure modes) have no artifact to detect. Offer them as Q&A topics through `ask-the-talk` when relevant. Point to `${CLAUDE_PLUGIN_ROOT}/templates/staffing-model.md` if the user is about to staff a team.
 
