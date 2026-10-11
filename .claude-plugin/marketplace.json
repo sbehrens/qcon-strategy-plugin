@@ -1,0 +1,23 @@
+{
+  "name": "strategy-playbook",
+  "owner": {
+    "name": "Scott Behrens"
+  },
+  "metadata": {
+    "description": "A lightweight playbook for taking a technical problem to an aligned strategy.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "strategy-playbook",
+      "source": "./plugins/strategy-playbook",
+      "description": "Learn the seven-level strategy playbook and build its documents: problem statement, north star and key outcomes, strategy bets, and the combined vision-and-strategy doc, with critic agents to attack the draft.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Scott Behrens"
+      },
+      "category": "productivity",
+      "keywords": ["strategy", "technical-strategy", "north-star", "problem-statement", "staff-engineer", "alignment"]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "strategy-playbook",
+  "version": "1.0.0",
+  "description": "Learn the seven-level strategy playbook and build its documents: problem statement, north star and key outcomes, strategy bets, and the combined vision-and-strategy doc, with critic agents to attack the draft.",
+  "author": {
+    "name": "Scott Behrens"
+  },
+  "license": "MIT",
+  "keywords": ["strategy", "technical-strategy", "north-star", "problem-statement", "staff-engineer", "alignment"]
+}
