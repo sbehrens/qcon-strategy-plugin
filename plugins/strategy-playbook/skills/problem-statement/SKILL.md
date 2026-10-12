@@ -11,6 +11,14 @@ Read first:
 - `${CLAUDE_PLUGIN_ROOT}/templates/problem-statement.md` (the shape)
 - `${CLAUDE_PLUGIN_ROOT}/examples/misaligned-ai/problem-statement.md` (a filled-in example to show the user)
 
+## Overwrite rule (applies to every write in this skill)
+
+**Show before/after on every overwrite. Every time, no exceptions.** Before any Write or Edit that changes an existing user file, put the before/after of each changed section in your reply text:
+- **Before:** the old text of the section, quoted in full.
+- **After:** the new text of the section, quoted in full.
+
+A tool call, a diff hidden in the tool input, or a line like "updated the Motivation section" does not count. Repeat the same before/after in your final message, so the user sees what was replaced. If the user already asked for the update in this request ("go ahead", "apply it"), show the before/after and apply it in the same turn; otherwise show it and ask first. A new file has no before: show its path only.
+
 ## 1. Interview
 
 You need six things. Take what the user already gave; ask only for what is missing, in **one** message, at most five questions:
@@ -39,13 +47,13 @@ If the user wants a team to solve it and has written detailed approaches, warn t
 1. Write `strategy/problem-statement.md` from the template. It is the source of truth for the pitch. Use a dated "Last Updated On."
 2. Sync Motivation in `strategy/vision-and-strategy.md`:
    - If the file does not exist, create it from `${CLAUDE_PLUGIN_ROOT}/templates/vision-and-strategy.md`. Fill only the title, audience, author, date, and **Motivation (Problem Statement)**. Keep every other section as the template placeholder, and set the **Open sections** line at the top to list each unfilled section by name (for example: North Star Vision, Key Outcomes, Guiding Principles, Scope, Non-Goals, Strategic Bets, Risks, Metrics, Questions, Detailed Bets).
-   - If it exists, replace only the Motivation paragraph. Leave every other section untouched.
+   - If it exists, replace only the Motivation paragraph. Leave every other section untouched. First quote the current Motivation text under **Before:** and your new text under **After:** in your reply, then edit.
    - Motivation is 2-4 sentences distilled from the problem statement: the problem, its impact with the strongest evidence, and why solving it matters now.
 
-**Before overwriting any existing user file, show the change** (a short before/after of the changed section). If the user already asked for the update in this request, show it and apply it; otherwise ask first.
+Follow the **Overwrite rule** at the top of this skill: show the before/after of each changed section in your reply before you write, and again in your final message.
 
 ## 5. Close
 
-- Report the two file paths and a "Still needed" list of placeholders.
+- Report the two file paths, the Motivation **Before:** / **After:** (when the combined doc already existed), and a "Still needed" list of placeholders.
 - Suggest the gut-check: show it to three people, and to your likeliest dissenter first. Do they each read it the same way?
 - Offer next tools in one line: `north-star`, `strategy-bets`, or the `cold-reader` agent for a reader test.

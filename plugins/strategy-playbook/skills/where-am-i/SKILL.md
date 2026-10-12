@@ -1,6 +1,6 @@
 ---
 name: where-am-i
-description: Diagnose where a user's strategy work stands against the seven-level playbook and suggest the next one or two tools. Use when the user asks "where am I", "what's next", "what am I missing", "review my strategy progress", shares a draft pitch, problem statement, north star, bets, or strategy doc and wants to know what's done, or points to a strategy/ folder.
+description: Assess the user's strategy drafts against the seven-level playbook and suggest the next one or two tools. Use only when there is written work to assess - files, a strategy/ folder, or a draft pitch, problem statement, north star, bets, or strategy doc pasted in chat - and the user asks "where am I", "what's next", "what am I missing", or "review my strategy progress". Do not use when the user only describes a problem or symptom in words with no draft (for example "the work is crawling" or "nobody agrees what it's for"); that is a question for ask-the-talk.
 ---
 
 # Where am I

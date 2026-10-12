@@ -9,6 +9,14 @@ A strategy is a set of choices with tradeoffs. You help the user write principle
 
 Read first: `${CLAUDE_PLUGIN_ROOT}/knowledge/playbook.md` (section "Level 5") and the Detailed Bets in `${CLAUDE_PLUGIN_ROOT}/examples/misaligned-ai/vision-and-strategy.md`.
 
+## Overwrite rule (applies to every write in this skill)
+
+**Show before/after on every overwrite. Every time, no exceptions.** Before any Write or Edit that changes an existing user file, put the before/after of each changed section in your reply text:
+- **Before:** the old text of the section, quoted in full.
+- **After:** the new text of the section, quoted in full.
+
+A tool call, a diff hidden in the tool input, or a line like "updated the Motivation section" does not count. Repeat the same before/after in your final message, so the user sees what was replaced. If the user already asked for the update in this request ("go ahead", "apply it"), show the before/after and apply it in the same turn; otherwise show it and ask first. A new file has no before: show its path only.
+
 ## 1. Get the context
 
 If `strategy/vision-and-strategy.md` or `strategy/problem-statement.md` exists, read it for the problem and north star. Otherwise ask, in one message, for the problem and the decisions people keep arguing about. If the user already said enough, go on.
@@ -50,6 +58,6 @@ Write **Guiding Principles**, **Scope**, **Non-Goals**, **Strategic Bets** (the 
 - If the file does not exist, create it from `${CLAUDE_PLUGIN_ROOT}/templates/vision-and-strategy.md`, fill these sections, and set the **Open sections** line at the top to list every section still unfilled by name.
 - If it exists, replace only these sections and update the Open sections line. Leave every other section untouched.
 
-**Before overwriting any existing user file, show the change** (before/after of the changed sections). If the user already asked for the update in this request, show it and apply it; otherwise ask first.
+Follow the **Overwrite rule** at the top of this skill: show the before/after of each changed section in your reply before you write, and again in your final message.
 
 Close with the file path and one line offering the `likeliest-dissenter` agent to argue the other side of each bet, and `strategy-doc` to finish risks, metrics, and questions.

@@ -9,6 +9,14 @@ The end product is `strategy/vision-and-strategy.md`. You create or update it, k
 
 Read first: `${CLAUDE_PLUGIN_ROOT}/templates/vision-and-strategy.md` and `${CLAUDE_PLUGIN_ROOT}/examples/misaligned-ai/vision-and-strategy.md`.
 
+## Overwrite rule (applies to every write in this skill)
+
+**Show before/after on every overwrite. Every time, no exceptions.** Before any Write or Edit that changes an existing user file, put the before/after of each changed section in your reply text:
+- **Before:** the old text of the section, quoted in full.
+- **After:** the new text of the section, quoted in full.
+
+A tool call, a diff hidden in the tool input, or a line like "updated the Motivation section" does not count. Repeat the same before/after in your final message, so the user sees what was replaced. If the user already asked for the update in this request ("go ahead", "apply it"), show the before/after and apply it in the same turn; otherwise show it and ask first. A new file has no before: show its path only.
+
 ## 1. Create or load
 
 - If `strategy/vision-and-strategy.md` exists, read it.
@@ -17,7 +25,7 @@ Read first: `${CLAUDE_PLUGIN_ROOT}/templates/vision-and-strategy.md` and `${CLAU
 
 ## 2. Re-sync Motivation
 
-If `strategy/problem-statement.md` exists, it is the source of truth. Distill its problem, strongest evidence, and why-now into 2-4 sentences and compare with the current Motivation. If they differ, show the before/after and update Motivation.
+If `strategy/problem-statement.md` exists, it is the source of truth. Distill its problem, strongest evidence, and why-now into 2-4 sentences and compare with the current Motivation. If they differ, quote the current Motivation under **Before:** and the new text under **After:** in your reply, then update Motivation. Never update it without showing both.
 
 ## 3. Fill the closing sections
 
@@ -38,4 +46,4 @@ Before you call the doc ready, run the reader test: launch the `cold-reader` age
 
 Then offer the other critics on the saved file: `likeliest-dissenter` and `exec-preview`, each given the doc path.
 
-**Before overwriting any existing user file, show the change** (before/after of the changed sections). If the user already asked for the update in this request, show it and apply it; otherwise ask first.
+Follow the **Overwrite rule** at the top of this skill: show the before/after of each changed section in your reply before you write, and again in your final message.
