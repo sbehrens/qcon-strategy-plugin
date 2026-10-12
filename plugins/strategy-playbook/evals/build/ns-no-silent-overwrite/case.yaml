@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: ns-no-silent-overwrite
+context:
+  scaffold_script: setup.sh

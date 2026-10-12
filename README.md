@@ -56,6 +56,16 @@ Builder skills write to `strategy/` in your working folder and always show you a
 
 Use any level on its own. It's a world map, not a forced sequence.
 
+## Evals
+
+The suite lives in `plugins/strategy-playbook/evals/` and runs with `claude plugin eval`. From the repo root:
+
+```
+plugins/strategy-playbook/evals/run.sh
+```
+
+It runs the offline hygiene checks first, then every model case (trigger, Q&A, where-am-i, the builder skills, and the critics). Each model run is a real call on your account. Extra flags pass through, for example `--case 'ask-*'` or `--runs 1`. `evals/hygiene.sh --self-test` and `evals/negative-control.sh` show that the checks fail on a broken plugin.
+
 ## Credit
 
 Based on the talk "Scaling Tech by Aligning Humans" (QCon SF 2026) by Scott Behrens.
